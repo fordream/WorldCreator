@@ -3,24 +3,24 @@ import pygame
 pygame.init()
 
 screen = pygame.display.set_mode([640,480])
-screen.fill([255,255,255])
-pygame.display.set_caption("WorldCreator DEVELOPMENT VERSION 1.0")
+screen.fill([255,0,0])
+pygame.display.set_caption("WorldCreator")
 flip = pygame.display.flip
 blit = screen.blit
 load = pygame.image.load
 fill = screen.fill
 
 def title():
-    w = load("w.png")
-    o = load("o.png")
-    r = load("r.png")
-    l = load("l.png")
-    d = load("d.png")
-    c = load("c.png")
-    e = load("e.png")
-    a = load("a.png")
-    t = load("t.png")
-    s = load("s.png")
+    w = load("font/w.png")
+    o = load("font/o.png")
+    r = load("font/r.png")
+    l = load("font/l.png")
+    d = load("font/d.png")
+    c = load("font/c.png")
+    e = load("font/e.png")
+    a = load("font/a.png")
+    t = load("font/t.png")
+    s = load("font/s.png")
 
     pygame.draw.rect(screen,[0,255,0],[54,290,244,52])
     pygame.draw.rect(screen,[0,0,0],[54,290,244,52],4)
