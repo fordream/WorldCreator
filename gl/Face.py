@@ -10,6 +10,5 @@ class face:
 
             del pos[2]
 
-            pos[0] -= z + cam.pos[0]
-            pos[1] -= z + cam.pos[1]
+            pos[0] = 640-pos[0] + cam.pos
         pygame.draw.polygon(surf,self.color,self.poslist)
