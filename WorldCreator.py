@@ -1,4 +1,4 @@
-import pygame
+import pygame,gl
 
 pygame.init()
 
@@ -63,9 +63,31 @@ while run:
                     if pos[1] > 289:
                         if pos[1] < 343:
                             run = False
-                            quittitlescreen = True
     flip()
         
 
 if quittitlescreen == True:
     pygame.quit()
+else:
+    cube = gl.Cube(100,[0,0,255],[256,256])
+    cube.render(screen)
+    pygame.display.flip()
+
+    run = 1
+
+    while run:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = 0
+                quittitlescreen = True
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                pos = pygame.mouse.get_pos()
+
+                if pos[0] > 53:
+                    if pos[0] < 299:
+                        if pos[1] > 289:
+                            if pos[1] < 343:
+                                run = False
+        flip()
+
+pygame.quit()
